@@ -21,9 +21,51 @@ app.post("/transactions", async (req, res) => {
     }
 });
 
-//get a transaction
+//get all transaction
+app.get("/transactions", async (req, res) => {
+    try {
+        const allTransactions = await pool.query ("SELECT * FROM transactions");
+        res.json(allTransactions.rows);
+    } catch (err) {
+        console.error(err.message);
+    }
+});
+
+//get a specific transaction
+app.get("/transactions/:id", async(req, res) => {
+    try {
+        const {id}= req.params;
+        const transactions = await pool.query("SELECT * FROM transactions WHERE transaction_id = $1", [id]);
+
+        res.json(transactions.rows[0]);
+
+    } catch (err) {
+        console.log(err.message);
+    }
+});
 
 //update a transaction
+app.put("/transactions/:id", async(req, res) => {
+    try {
+        const {id} = req.params;
+        const { date, amount } = req.body;
+        const updateTransaction = await pool.query("UPDATE transactions SET amount = $1 WHERE transaction_id = $2", [amount, id]);
+        res.json ("updated transaction");
+    } catch (err) {
+        console.log(err.message);
+    }
+})
+
+//delete a transaction
+app.delete("/transactions/:id", async(req,res) => {
+    try {
+        const {id} = req.params;
+        const delteTransaction = await pool.query("DELETE FROM transactions WHERE transaction_id = $1", [id]);
+        res.json("deleted transaction");
+    } catch (err) {
+        console.log(err.message);
+    }
+})
 
 app.listen(5000, () => {
     console.log("server started on port 5000");
