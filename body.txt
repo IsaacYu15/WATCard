@@ -1,0 +1,907 @@
+<body class="" data-new-gr-c-s-check-loaded="14.1130.0" data-gr-ext-installed="">
+    <header>
+        <div id="oneweb_skip_to_content"><a href="#oneweb_main_content" tabindex="0">Skip to main content</a></div>
+        <div class="ow-header-wrapper">
+            <div class="container">
+  
+<div class="ow-table ow-header-container hidden-xs">
+    <div class="ow-vcenter ow-logo-container" id="header_logo">
+        <a href="/OneWeb/" aria-hidden="true" tabindex="-1"><img src="/OneWeb/Application/GetImagesForTheme?imageCategory=LOGO" alt="Home Page"></a> 
+    </div>
+    <div class="ow-vcenter ow-text-container">
+            <div class="h1">WATCARD</div>
+            <div class="h2 hidden" aria-hidden="true">An empty text for header line 2</div>
+    </div>                 
+</div>
+    
+<div class="ow-header-container visible-xs">
+    <div class="ow-table">
+        <div class="ow-vcenter ow-logo-container" id="header_xs_logo">
+            <img src="/OneWeb/Application/GetImagesForTheme?imageCategory=LOGOXS" alt="">
+        </div>
+        <div class="ow-vcenter ow-text-container">
+                <div class="h3" aria-hidden="true">WATCARD</div>
+        </div>
+    </div>
+</div>
+
+<div id="oneweb_customheader" class="hidden-xs"></div>
+<div id="oneweb_customheader_xs" class="visible-xs"></div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main" class="" data-sessiontimeout="886">
+        <div id="ajax-anti-forgery"><input name="__RequestVerificationToken" type="hidden" value="E6QG4EJveJraCDhsgy-6QQAHIgwPgAXWvV59Nuniu7GWwC2tZ9baQNCP9_xpZaHIheFg2Y3xBhZvWNc3nlaVJStY9nfnEIecvOB_iMaTxKM1"></div>
+
+            <img class="ow-background-image" src="/OneWeb/Application/GetImagesForTheme?imageCategory=BGIMAGE" alt="">
+        
+        <div class="container ow-main-container">
+            <div class="ow-nav-wrapper row">
+<nav class="navbar ow-navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ow-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/OneWeb/Application" class="navbar-brand" aria-label="Home Page"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="ow-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/OneWeb/Account/Personal">PERSONAL INFORMATION</a></li><li><a href="/OneWeb/Account/Messages">MESSAGES</a></li><li class="divider"></li><li><a href="/OneWeb/Account/ChangeCardPIN">CHANGE CARD PIN</a></li><li><a href="/OneWeb/Account/ChangePIN">CHANGE PASSWORD</a></li><li><a href="/OneWeb/Account/ActivateDeactivate">ACTIVATE / DEACTIVATE</a></li></ul></li><li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">FINANCIAL <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/OneWeb/Financial/Balances">BALANCES</a></li><li class="divider"></li><li class="active"><a href="/OneWeb/Financial/Transactions">TRANSACTIONS</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">HELP <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/OneWeb/Help/ContactUs">CONTACT US</a></li><li><a href="/OneWeb/Help/AccessibilityStatement">ACCESSIBILITY STATEMENT</a></li></ul></li><li><a href="/OneWeb/Account/LogOff"><span class="glyphicon glyphicon-lock"></span> LOG OFF</a></li>      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+            </div>
+            <section id="oneweb_main_content" role="main" tabindex="-1">
+                <div class="ow-page-name">
+                    <h1><span class="glyphicon glyphicon-chevron-right ow-icon"></span><span class="ow-title">Transactions</span></h1>
+                </div>
+                <div class="ow-content-wrapper">                  
+                    
+
+<div class="col-md-12">
+    <div class="ow-container-holder">
+
+        <div id="transaction_date_error" class="validation-summary-errors alert alert-block alert-danger" style="display:none;"><span>The date format should be: mm/dd/yy.</span><span class="hidden-xs"> Please correct the errors and try again.</span><ul></ul></div>
+
+        <form class="form-inline" role="form" novalidate="novalidate">
+        
+         <fieldset>          
+            <legend>Quick Search</legend>
+             <ul class="ow-list-primary">
+                 <li><span tabindex="0" class="ow-link" data-action="/OneWeb/Financial/TransactionsPass" data-date="09/08/2023">Past 30 days <i>(approved)</i></span></li>
+                 <li><span tabindex="0" class="ow-link" data-action="/OneWeb/Financial/TransactionsPass" data-date="08/09/2023">Past 60 days <i>(approved)</i></span></li>
+             </ul>
+         </fieldset>
+         <fieldset>          
+            <legend>Select a Date Range</legend>
+            <p class="ow-required">All fields are required</p>
+
+            <div class="ow-inline-form-group">
+                <div class="form-group">
+                    <label for="tran_mode" class="hidden">Transaction Mode: </label>
+                    <select class="form-control" id="tran_mode" disabled="">
+                      <option data-action="/OneWeb/Financial/TransactionsPass">Approved</option>
+                                          </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="trans_start_date">From: </label>
+                    <div class="input-group">
+                        <input class="form-control date hasDatepicker" id="trans_start_date" value="10/08/2023" aria-required="true">
+                        <span class="input-group-btn">
+                            <button class="btn ow-btn-primary ow-btn-date" type="button" aria-label="Date Picker"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; z-index: 3; display: none; font-size: 14px; right: 0px;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a href="javascript:;" class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a href="javascript:;" class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">June</span>&nbsp;<span class="ui-datepicker-year">2023</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">1</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">2</span></a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">3</span></a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">4</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">5</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">6</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">7</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">8</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">9</span></a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">10</span></a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">11</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">12</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">13</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">14</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">15</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">16</span></a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">17</span></a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">18</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">19</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">20</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">21</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">22</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">23</span></a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">24</span></a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">25</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">26</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">27</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">28</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">29</span></a></td><td class=" " data-handler="selectDay" data-event="click" data-month="5" data-year="2023"><a class="ui-state-default" href="#"><span class="ow-day">30</span></a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div>
+                        </span>
+                    </div>            
+                </div>
+
+                <div class="form-group">
+                    <label for="trans_end_date">To: </label>
+                    <div class="input-group">
+                        <input class="form-control date hasDatepicker" id="trans_end_date" value="10/08/2023" aria-required="true">
+                        <span class="input-group-btn">
+                            <button class="btn ow-btn-primary ow-btn-date" type="button" aria-label="Date Picker"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
+                        </span>
+                    </div>                 
+                </div>
+
+                <div class="ow-btn-panel">
+                    <button id="trans_search" type="button" class="btn ow-btn-primary btn-block-xs"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> <span class="visible-xs-inline">Search</span></button>
+                </div>
+            </div>
+         </fieldset>
+        </form>
+
+        <div class="ow-result-container" id="transaction_result" data-loaderimg="/OneWeb/Content/images/loader.gif"><table class="table table-striped ow-table-responsive">
+    
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th class="ow-align-right">Amount</th>
+        <th>Balance</th>
+        <th>Units</th>
+        <th>Trantype</th>
+        <th>Terminal</th>
+    </tr>
+    </thead>
+        
+    <tbody>
+        <tr>
+            <td data-title="Date:">10/06/2023 8:17:46 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/05/2023 6:48:50 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.42</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/05/2023 11:33:22 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.04</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/05/2023 9:42:08 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.62</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/04/2023 6:28:11 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/04/2023 5:37:12 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00025 : FS-DC TH-1                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/04/2023 11:52:02 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.79</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/03/2023 5:44:35 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.00</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/03/2023 9:41:28 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -0.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00023 : FS-DC TH-2                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/02/2023 11:39:52 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00189 : FS-SLC PITA-SHWARMA-10        </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/02/2023 8:13:03 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/01/2023 7:31:08 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.53</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/01/2023 4:10:45 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01015 : CMH LAUNDRY2                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/01/2023 3:34:34 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01015 : CMH LAUNDRY2                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">10/01/2023 12:06:55 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.83</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/30/2023 6:22:17 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/30/2023 1:04:35 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.74</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/29/2023 6:41:46 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.89</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/29/2023 1:53:44 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/29/2023 12:15:45 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.64</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/28/2023 8:29:12 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.55</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/27/2023 5:30:49 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -18.07</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01370 : IZNA POKE PLUS                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/27/2023 11:45:10 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01257 : FS-SLC CHEF &amp; FARMER-14       </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/27/2023 8:12:37 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.29</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/26/2023 11:54:52 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.28</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/26/2023 9:33:46 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.86</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/25/2023 5:51:25 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01017 : FS-UWP MARKET-38              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/25/2023 11:38:38 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00189 : FS-SLC PITA-SHWARMA-10        </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/25/2023 8:05:42 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/22/2023 5:16:03 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -0.74</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00025 : FS-DC TH-1                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/22/2023 1:53:20 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/22/2023 11:38:30 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.64</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/22/2023 7:58:16 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.28</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/21/2023 7:20:46 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.34</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/21/2023 12:24:57 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.72</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/21/2023 9:41:04 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/20/2023 6:19:01 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.32</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/20/2023 5:33:48 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.40</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00641 : FS-DC-CHAT                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/20/2023 12:02:20 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.81</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/20/2023 7:46:48 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.79</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/19/2023 9:28:03 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01015 : CMH LAUNDRY2                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/19/2023 8:43:38 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01015 : CMH LAUNDRY2                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/19/2023 7:42:50 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.00</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/19/2023 12:00:47 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.79</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/19/2023 9:37:48 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.69</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/18/2023 6:42:50 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.34</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/18/2023 2:45:11 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/18/2023 11:49:10 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.24</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01111 : FS-SLC QUESADA-54             </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/17/2023 8:15:18 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.83</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/17/2023 12:03:02 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.54</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/16/2023 7:21:40 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/16/2023 12:43:57 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -18.07</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01370 : IZNA POKE PLUS                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/16/2023 12:06:39 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.04</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/15/2023 12:18:21 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.79</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/15/2023 7:58:02 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.44</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/14/2023 6:08:44 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.84</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/14/2023 11:41:53 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.46</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01017 : FS-UWP MARKET-38              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/13/2023 12:01:54 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01017 : FS-UWP MARKET-38              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/13/2023 8:03:36 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.37</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/12/2023 5:59:43 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.83</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/12/2023 11:50:37 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00028 : FS-DC BYTES-26                </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/12/2023 9:28:27 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.04</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/11/2023 6:50:18 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/11/2023 6:29:00 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -9.07</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/11/2023 2:43:38 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -0.84</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00025 : FS-DC TH-1                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/11/2023 7:59:27 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.72</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01017 : FS-UWP MARKET-38              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/10/2023 3:01:01 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01014 : CMH LAUNDRY1                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/10/2023 2:19:40 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">004 : VEND (MONEY)                            </td>
+            <td data-title="Terminal:">01015 : CMH LAUNDRY2                  </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/10/2023 2:16:25 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ 40.00</td>
+            <td data-title="Balance:">6</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">003 : PREPAYMENT (ADMIN)                      </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/10/2023 1:26:49 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -7.50</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/10/2023 9:41:11 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/09/2023 3:49:22 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.54</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/09/2023 10:22:02 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.25</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/08/2023 9:55:39 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.99</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/08/2023 6:44:21 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -1.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00025 : FS-DC TH-1                    </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/08/2023 7:49:50 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/07/2023 6:22:58 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -9.41</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/07/2023 12:17:47 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.85</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00418 : FS-SLC SUBWAY-41              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/06/2023 5:23:52 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.04</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/06/2023 8:06:47 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -3.14</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/05/2023 7:47:26 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.41</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/05/2023 7:49:10 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.44</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/04/2023 7:20:56 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -2.49</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/04/2023 6:16:55 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.11</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00043 : FS-REV REVELATION-19          </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/04/2023 6:06:13 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -5.74</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">00024 : FS-REV REVELATION-20          </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/03/2023 7:00:58 PM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -6.76</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">09/03/2023 8:53:02 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ -4.11</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">104 : FINANCIAL VEND                          </td>
+            <td data-title="Terminal:">01016 : FS-UWP MARKET-37              </td>
+        </tr>
+        <tr>
+            <td data-title="Date:">08/29/2023 8:45:07 AM</td>
+            <td data-title="Amount:" class="ow-align-right">$ 1,425.00</td>
+            <td data-title="Balance:">1</td>
+            <td data-title="Units:">0</td>
+            <td data-title="Trantype:">003 : PREPAYMENT (ADMIN)                      </td>
+            <td data-title="Terminal:">01023 : WATCARD OFFICE LLM2           </td>
+        </tr>
+    </tbody>
+
+</table>
+</div>
+    </div>
+</div>
+
+
+
+                </div>
+            </section>     
+        </div>
+    </div> 
+
+    <footer>
+        <div class="ow-footer-wrapper">
+            <div class="container">
+<div class="ow-footer-container">
+    <ul>
+                <li><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:watcard@uwaterloo.ca">watcard@uwaterloo.ca</a></li>
+        <li><a href="https://www.touchnet.com/en/technology-solution-privacy-policy">End User Privacy Notice</a></li>
+        <li>OneWeb ver. 8.4.1.32</li>
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- /container -->
+    
+    <!-- Timeout Waring Dialog -->
+
+
+<div class="modal fade" id="timeoutWarning" tabindex="-1" role="dialog" aria-labelledby="timeoutWarningTitle" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h2 class="modal-title" id="timeoutWarningTitle">Warning</h2>
+            </div>
+            <div class="modal-body">
+                <span>Your session is about to expire. You will be logged out in <strong><span id="timeoutValue">0</span></strong> seconds.</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-action="/OneWeb/Account/LogOff" id="timeoutLogout">Log Out</button>
+                <button type="button" class="btn ow-btn-primary" data-action="/OneWeb/Application/KeepAlive" id="timeoutContinue" data-dismiss="modal">Continue Session</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="/OneWeb/Scripts/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="/OneWeb/Scripts/jquery.patches.js" type="text/javascript"></script>
+    <script src="/OneWeb/Scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/OneWeb/Scripts/SessionTimeout.min.js" type="text/javascript"></script>
+    <script src="/OneWeb/Scripts/ValidationSummaryFocus.min.js" type="text/javascript"></script>
+    
+<script src="/OneWeb/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/OneWeb/Scripts/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+<script src="/OneWeb/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script src="/OneWeb/Scripts/BootstrapValidation.js" type="text/javascript"></script>
+<script src="/OneWeb/Scripts/FinancialHistory.js" type="text/javascript"></script>
+
+    <script src="/OneWeb/Scripts/OneWeb.js" type="text/javascript"></script>
+
+
+</body>
