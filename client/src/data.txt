@@ -1,528 +1,176 @@
 10/06/2023 8:17:46 AM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/05/2023 6:48:50 PM
 $ -3.42
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/05/2023 11:33:22 AM
 $ -7.04
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/05/2023 9:42:08 AM
 $ -3.62
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/04/2023 6:28:11 PM
 $ -6.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/04/2023 5:37:12 PM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-00025 : FS-DC TH-1                    
 10/04/2023 11:52:02 AM
 $ -6.79
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 10/03/2023 5:44:35 PM
 $ -6.00
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/03/2023 9:41:28 AM
 $ -0.99
-1
-0
-104 : FINANCIAL VEND                          
-00023 : FS-DC TH-2                    
 10/02/2023 11:39:52 AM
 $ -6.99
-1
-0
-104 : FINANCIAL VEND                          
-00189 : FS-SLC PITA-SHWARMA-10        
 10/02/2023 8:13:03 AM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/01/2023 7:31:08 PM
 $ -7.53
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 10/01/2023 4:10:45 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01015 : CMH LAUNDRY2                  
 10/01/2023 3:34:34 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01015 : CMH LAUNDRY2                  
 10/01/2023 12:06:55 PM
 $ -6.83
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/30/2023 6:22:17 PM
 $ -6.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/30/2023 1:04:35 PM
 $ -4.74
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/29/2023 6:41:46 PM
 $ -6.89
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/29/2023 1:53:44 PM
 $ -3.99
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/29/2023 12:15:45 PM
 $ -6.64
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/28/2023 8:29:12 AM
 $ -3.55
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/27/2023 5:30:49 PM
 $ -18.07
-1
-0
-004 : VEND (MONEY)                            
-01370 : IZNA POKE PLUS                
 09/27/2023 11:45:10 AM
 $ -4.99
-1
-0
-104 : FINANCIAL VEND                          
-01257 : FS-SLC CHEF & FARMER-14       
 09/27/2023 8:12:37 AM
 $ -3.29
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/26/2023 11:54:52 AM
 $ -6.28
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/26/2023 9:33:46 AM
 $ -2.86
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/25/2023 5:51:25 PM
 $ -3.99
-1
-0
-104 : FINANCIAL VEND                          
-01017 : FS-UWP MARKET-38              
 09/25/2023 11:38:38 AM
 $ -6.99
-1
-0
-104 : FINANCIAL VEND                          
-00189 : FS-SLC PITA-SHWARMA-10        
 09/25/2023 8:05:42 AM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/22/2023 5:16:03 PM
 $ -0.74
-1
-0
-104 : FINANCIAL VEND                          
-00025 : FS-DC TH-1                    
 09/22/2023 1:53:20 PM
 $ -3.99
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/22/2023 11:38:30 AM
 $ -6.64
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/22/2023 7:58:16 AM
 $ -2.28
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/21/2023 7:20:46 PM
 $ -7.34
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/21/2023 12:24:57 PM
 $ -5.72
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/21/2023 9:41:04 AM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/20/2023 6:19:01 PM
 $ -7.32
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/20/2023 5:33:48 PM
 $ -3.40
-1
-0
-104 : FINANCIAL VEND                          
-00641 : FS-DC-CHAT                    
 09/20/2023 12:02:20 PM
 $ -7.81
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/20/2023 7:46:48 AM
 $ -2.79
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/19/2023 9:28:03 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01015 : CMH LAUNDRY2                  
 09/19/2023 8:43:38 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01015 : CMH LAUNDRY2                  
 09/19/2023 7:42:50 PM
 $ -6.00
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/19/2023 12:00:47 PM
 $ -6.79
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/19/2023 9:37:48 AM
 $ -3.69
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/18/2023 6:42:50 PM
 $ -7.34
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/18/2023 2:45:11 PM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/18/2023 11:49:10 AM
 $ -6.24
-1
-0
-104 : FINANCIAL VEND                          
-01111 : FS-SLC QUESADA-54             
 09/17/2023 8:15:18 PM
 $ -5.83
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/17/2023 12:03:02 PM
 $ -5.54
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/16/2023 7:21:40 PM
 $ -6.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/16/2023 12:43:57 PM
 $ -18.07
-1
-0
-004 : VEND (MONEY)                            
-01370 : IZNA POKE PLUS                
 09/16/2023 12:06:39 PM
 $ -4.04
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/15/2023 12:18:21 PM
 $ -6.79
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/15/2023 7:58:02 AM
 $ -2.44
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/14/2023 6:08:44 PM
 $ -7.84
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/14/2023 11:41:53 AM
 $ -7.46
-1
-0
-104 : FINANCIAL VEND                          
-01017 : FS-UWP MARKET-38              
 09/13/2023 12:01:54 PM
 $ -6.99
-1
-0
-104 : FINANCIAL VEND                          
-01017 : FS-UWP MARKET-38              
 09/13/2023 8:03:36 AM
 $ -2.37
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/12/2023 5:59:43 PM
 $ -6.83
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/12/2023 11:50:37 AM
 $ -6.49
-1
-0
-104 : FINANCIAL VEND                          
-00028 : FS-DC BYTES-26                
 09/12/2023 9:28:27 AM
 $ -4.04
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/11/2023 6:50:18 PM
 $ -3.99
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/11/2023 6:29:00 PM
 $ -9.07
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/11/2023 2:43:38 PM
 $ -0.84
-1
-0
-104 : FINANCIAL VEND                          
-00025 : FS-DC TH-1                    
 09/11/2023 7:59:27 AM
 $ -2.72
-1
-0
-104 : FINANCIAL VEND                          
-01017 : FS-UWP MARKET-38              
 09/10/2023 3:01:01 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01014 : CMH LAUNDRY1                  
 09/10/2023 2:19:40 PM
 $ -2.00
-6
-0
-004 : VEND (MONEY)                            
-01015 : CMH LAUNDRY2                  
 09/10/2023 2:16:25 PM
 $ 40.00
-6
-0
-003 : PREPAYMENT (ADMIN)                      
-01016 : FS-UWP MARKET-37              
 09/10/2023 1:26:49 PM
 $ -7.50
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/10/2023 9:41:11 AM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/09/2023 3:49:22 PM
 $ -5.54
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/09/2023 10:22:02 AM
 $ -4.25
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/08/2023 9:55:39 PM
 $ -3.99
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/08/2023 6:44:21 PM
 $ -1.49
-1
-0
-104 : FINANCIAL VEND                          
-00025 : FS-DC TH-1                    
 09/08/2023 7:49:50 AM
 $ -3.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/07/2023 6:22:58 PM
 $ -9.41
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/07/2023 12:17:47 PM
 $ -6.85
-1
-0
-104 : FINANCIAL VEND                          
-00418 : FS-SLC SUBWAY-41              
 09/06/2023 5:23:52 PM
 $ -6.04
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/06/2023 8:06:47 AM
 $ -3.14
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/05/2023 7:47:26 PM
 $ -6.41
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/05/2023 7:49:10 AM
 $ -5.44
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/04/2023 7:20:56 PM
 $ -2.49
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/04/2023 6:16:55 PM
 $ -4.11
-1
-0
-104 : FINANCIAL VEND                          
-00043 : FS-REV REVELATION-19          
 09/04/2023 6:06:13 PM
 $ -5.74
-1
-0
-104 : FINANCIAL VEND                          
-00024 : FS-REV REVELATION-20          
 09/03/2023 7:00:58 PM
 $ -6.76
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 09/03/2023 8:53:02 AM
 $ -4.11
-1
-0
-104 : FINANCIAL VEND                          
-01016 : FS-UWP MARKET-37              
 08/29/2023 8:45:07 AM
 $ 1,425.00
-1
-0
-003 : PREPAYMENT (ADMIN)                      
-01023 : WATCARD OFFICE LLM2           

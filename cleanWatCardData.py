@@ -7,9 +7,11 @@ table = soup.find('table', {'class': 'table table-striped ow-table-responsive'})
 """save to txt"""
 with open('./client/src/data.txt', 'w') as f:
     for row in table.find_all('tr'):
-        row_data = ""
-        for cell in row.find_all('td'):
-          f.write(cell.text + '\n')
-    
+        row_content = row.find_all('td')
+        
+        if len(row_content) > 1:
+          for i in range(0,2):
+            f.write(row_content[i].text + "\n")
+
 
 
