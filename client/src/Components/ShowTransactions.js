@@ -73,19 +73,15 @@ function ShowTransactions() {
     //ISSUE: organize by date is not working well
     for (var i = 0; i < rawData.length; i++) {
       if (i > 0) {
-        if (
-          i % 2 === 0 &&
-          rawData[i].split(" ")[0] !== rawData[i - 2].split(" ")[0]
-        ) {
+        if (rawData[i].split(" ")[0] !== rawData[i - 1].split(" ")[0]) {
+          console.log(rawData[i]);
+          console.log(transactionsInOneDay);
           transactionsOrganized.push(transactionsInOneDay);
           transactionsInOneDay = [];
-          transactionsInOneDay.push(rawData[i]);
-        } else {
-          transactionsInOneDay.push(rawData[i]);
         }
-      } else {
-        transactionsInOneDay.push(rawData[i]);
       }
+
+      transactionsInOneDay.push(rawData[i]);
     }
 
     updateTransactions(transactionsOrganized);
@@ -101,7 +97,17 @@ function ShowTransactions() {
         return (
           <div>
             {items.map((subItems) => {
-              return <h4>{subItems}</h4>;
+              var data = subItems.split(" ");
+              return (
+                <div>
+                  <h4>
+                    {data[0]} | {data[1]} {data[2]}
+                  </h4>
+                  <h4>
+                    {data[3]} {data[4]}
+                  </h4>
+                </div>
+              );
             })}
             <h4>-----</h4>
           </div>
