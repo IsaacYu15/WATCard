@@ -5,6 +5,7 @@ function ShowTransactions() {
   const [rawData, updateRawData] = useState([]);
   const [transactions, updateTransactions] = useState([]);
 
+  //ISSUE: why does this keep updating
   useEffect(() => {
     if (rawData.length === 0) {
       getTransactions();
@@ -13,7 +14,7 @@ function ShowTransactions() {
     }
   }, [rawData, transactions]);
 
-  //"/r bug occuring"
+  //ISSUE: "/r bug occuring"
   const submitTransactions = async (e) => {
     e.preventDefault(); //stop refresh
 
@@ -69,7 +70,7 @@ function ShowTransactions() {
     var transactionsOrganized = [];
     var transactionsInOneDay = [];
 
-    //organize by date
+    //ISSUE: organize by date is not working well
     for (var i = 0; i < rawData.length; i++) {
       if (i > 0) {
         if (
@@ -90,7 +91,7 @@ function ShowTransactions() {
     updateTransactions(transactionsOrganized);
   };
 
-  //look into keys
+  //ISSUE: look into keys
   return (
     <section id="transactions">
       <button onClick={submitTransactions}>SUBMIT TRANSACTIONS</button>
