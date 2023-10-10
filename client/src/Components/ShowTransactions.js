@@ -6,15 +6,19 @@ function ShowTransactions() {
   const [transactions, updateTransactions] = useState([]);
 
   useEffect(() => {
-    fileToArr();
-  }, []);
+    if (rawData.length === 0) {
+      getTransactions();
+    } else if (transactions.length === 0) {
+      updateTransactionsByDate();
+    }
+  }, [rawData, transactions]);
 
   //"/r bug occuring"
   const submitTransactions = async (e) => {
     e.preventDefault(); //stop refresh
 
     try {
-      for (var i = 0; i < 4; i += 2) {
+      for (var i = 0; i < rawData.length; i += 2) {
         const response = await fetch("http://localhost:5000/transactions", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -30,36 +34,61 @@ function ShowTransactions() {
     }
   };
 
+  const getTransactions = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/transactions");
+      const jsonData = await response.json();
+
+      var tempData = [];
+
+      for (var i = 0; i < jsonData.length; i++) {
+        tempData.push([jsonData[i].date] + " " + [jsonData[i].amount]);
+      }
+
+      if (tempData.length === 0) {
+        fileToArr();
+        console.log("GET BY DATA");
+      } else {
+        updateRawData(tempData);
+        console.log("GET BY PERN");
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   async function fileToArr() {
     const response = await fetch(data);
 
     var responseText = await response.text();
     var responseArray = responseText.split("\n");
     updateRawData(responseArray);
+  }
 
+  const updateTransactionsByDate = () => {
     var transactionsOrganized = [];
     var transactionsInOneDay = [];
 
     //organize by date
-    for (var i = 0; i < responseArray.length; i++) {
+    for (var i = 0; i < rawData.length; i++) {
       if (i > 0) {
         if (
           i % 2 === 0 &&
-          responseArray[i].split(" ")[0] !== responseArray[i - 2].split(" ")[0]
+          rawData[i].split(" ")[0] !== rawData[i - 2].split(" ")[0]
         ) {
           transactionsOrganized.push(transactionsInOneDay);
           transactionsInOneDay = [];
-          transactionsInOneDay.push(responseArray[i]);
+          transactionsInOneDay.push(rawData[i]);
         } else {
-          transactionsInOneDay.push(responseArray[i]);
+          transactionsInOneDay.push(rawData[i]);
         }
       } else {
-        transactionsInOneDay.push(responseArray[i]);
+        transactionsInOneDay.push(rawData[i]);
       }
     }
 
     updateTransactions(transactionsOrganized);
-  }
+  };
 
   //look into keys
   return (
