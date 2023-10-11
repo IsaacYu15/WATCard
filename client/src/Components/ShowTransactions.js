@@ -1,10 +1,33 @@
 import React, { useEffect, useState } from "react";
 import data from "../data.txt";
 
+import LineChart from "./LineChart";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+
+Chart.register(CategoryScale);
+
 function ShowTransactions() {
   const [rawData, updateRawData] = useState([]);
   const [transactions, updateTransactions] = useState([]);
 
+  const [chartData, setChartData] = useState({
+    labels: "yes",
+    datasets: [
+      {
+        label: "Users Gained ",
+        data: [1, 2, 3, 4, 5, 6],
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          "#50AF95",
+          "#f3ba2f",
+          "#2a71d0",
+        ],
+        borderColor: "black",
+        borderWidth: 5,
+      },
+    ],
+  });
   //ISSUE: why does this keep updating
   useEffect(() => {
     if (rawData.length === 0) {
@@ -70,7 +93,6 @@ function ShowTransactions() {
     var transactionsOrganized = [];
     var transactionsInOneDay = [];
 
-    //ISSUE: organize by date is not working well
     for (var i = 0; i < rawData.length; i++) {
       if (i > 0) {
         if (rawData[i].split(" ")[0] !== rawData[i - 1].split(" ")[0]) {
@@ -88,6 +110,7 @@ function ShowTransactions() {
   };
 
   //ISSUE: look into keys
+  //ISSUE: printing out this data is SO bad
   return (
     <section id="transactions">
       <button onClick={submitTransactions}>SUBMIT TRANSACTIONS</button>
@@ -113,6 +136,8 @@ function ShowTransactions() {
           </div>
         );
       })}
+
+      <LineChart chartData={chartData} />
     </section>
   );
 }
