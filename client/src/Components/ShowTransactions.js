@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import data from "../data.txt";
 import Chart from "chart.js/auto";
+import "./ShowTransactions.css";
 
 function ShowTransactions() {
-  const [rawData, updateRawData] = useState([]);
   const [json, updateJSONdata] = useState([]);
-
   const [transactions, updateTransactions] = useState([]);
 
   //ISSUE: why does this keep updating
@@ -29,29 +27,9 @@ function ShowTransactions() {
         },
       });
     }
-  }, [json, rawData, transactions]);
+  }, [json, transactions]);
 
   //ISSUE: "/r bug occuring"
-  const submitTransactions = async (e) => {
-    e.preventDefault(); //stop refresh
-
-    try {
-      for (var i = 0; i < rawData.length; i += 2) {
-        const response = await fetch("http://localhost:5000/transactions", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            date: rawData[i],
-            amount: rawData[i + 1],
-          }),
-        });
-        //console.log(response);
-      }
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-
   const getTransactions = async () => {
     try {
       const response = await fetch("http://localhost:5000/transactions");
@@ -94,24 +72,27 @@ function ShowTransactions() {
 
   //ISSUE: look into keys
   return (
-    <section id="transactions">
-      <div id="charts">
+    <section id="transactions_container">
+      <div id="transactions_charts">
         <canvas id="transactionLineChart"></canvas>
+        <input type="text" placeholder="Start Date" />
+        <input type="text" placeholder="End Date" />
+        <button>Submit</button>
       </div>
 
-      <button onClick={submitTransactions}>SUBMIT TRANSACTIONS</button>
-      <h1>ShowTransaction</h1>
-
-      {transactions.map((items) => {
-        return (
-          <div>
-            {items.map((subItems) => {
-              return <h4>{subItems}</h4>;
-            })}
-            <h4>-----</h4>
-          </div>
-        );
-      })}
+      <div id="transactions">
+        <h1>TRANSACTIONS</h1>
+        {transactions.map((items) => {
+          return (
+            <div>
+              {items.map((subItems) => {
+                return <h4>{subItems}</h4>;
+              })}
+              <h4>-----</h4>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

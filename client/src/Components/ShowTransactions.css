@@ -1,0 +1,8 @@
+#transactions_container {
+  display: flex;
+  flex-direction: row;
+}
+
+#transactions_charts {
+  width: 75%;
+}
