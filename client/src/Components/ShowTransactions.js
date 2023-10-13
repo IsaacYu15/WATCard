@@ -84,11 +84,11 @@ function ShowTransactions() {
         <h1>TRANSACTIONS</h1>
         {transactions.map((items) => {
           return (
-            <div>
+            //do a card component here later
+            <div id="transactions_daily">
               {items.map((subItems) => {
                 return <h4>{subItems}</h4>;
               })}
-              <h4>-----</h4>
             </div>
           );
         })}
