@@ -5,14 +5,13 @@ import "./ShowTransactions.css";
 function ShowTransactions() {
   const [json, updateJSONdata] = useState([]);
   const [transactions, updateTransactions] = useState([]);
-
+  const [fullTransactions, updateFullTransactions] = useState([]);
   //ISSUE: why does this keep updating
   useEffect(() => {
     if (json.length === 0) {
       getTransactions();
     } else if (transactions.length === 0) {
       updateTransactionsByDate();
-
       //update the chart
       new Chart(document.getElementById("transactionLineChart"), {
         type: "line",
@@ -26,6 +25,8 @@ function ShowTransactions() {
           ],
         },
       });
+    } else if (fullTransactions.length === 0) {
+      updateFullTransactions([...transactions]);
     }
   }, [json, transactions]);
 
@@ -56,7 +57,6 @@ function ShowTransactions() {
 
     for (var i = 0; i < json.length; i++) {
       if (i > 0) {
-        console.log(json[i].date.split(" ")[0]);
         if (json[i].date.split(" ")[0] !== json[i - 1].date.split(" ")[0]) {
           transactionsOrganized.push(transactionsInOneDay);
           transactionsInOneDay = [];
@@ -67,17 +67,41 @@ function ShowTransactions() {
       transactionsInOneDay.push(json[i].amount);
     }
 
-    updateTransactions(transactionsOrganized);
+    updateTransactions([...transactionsOrganized]);
   };
 
+  const changeDateRange = () => {
+    const start = document.getElementById("startDateText").value;
+    const end = document.getElementById("endDateText").value;
+
+    var inRange = false;
+    var transactionsInRange = [];
+
+    console.log(fullTransactions);
+
+    for (var i = 0; i < fullTransactions.length; i++) {
+      if ((fullTransactions[i][0].split(" ")[0] === start) & !inRange) {
+        inRange = true;
+      } else if (fullTransactions[i][0].split(" ")[0] === end) {
+        inRange = false;
+        break;
+      }
+
+      if (inRange) {
+        transactionsInRange.push(fullTransactions[i]);
+      }
+    }
+
+    updateTransactions([...transactionsInRange]);
+  };
   //ISSUE: look into keys
   return (
     <section id="transactions_container">
       <div id="transactions_charts">
         <canvas id="transactionLineChart"></canvas>
-        <input type="text" placeholder="Start Date" />
-        <input type="text" placeholder="End Date" />
-        <button>Submit</button>
+        <input id="startDateText" type="text" placeholder="Start Date" />
+        <input id="endDateText" type="text" placeholder="End Date" />
+        <button onClick={changeDateRange}>Submit</button>
       </div>
 
       <div id="transactions">
