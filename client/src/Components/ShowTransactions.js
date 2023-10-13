@@ -1,41 +1,35 @@
 import React, { useEffect, useState } from "react";
 import data from "../data.txt";
-
-import LineChart from "./LineChart";
 import Chart from "chart.js/auto";
-import { CategoryScale } from "chart.js";
-
-Chart.register(CategoryScale);
 
 function ShowTransactions() {
   const [rawData, updateRawData] = useState([]);
+  const [json, updateJSONdata] = useState([]);
+
   const [transactions, updateTransactions] = useState([]);
 
-  const [chartData, setChartData] = useState({
-    labels: "yes",
-    datasets: [
-      {
-        label: "Users Gained ",
-        data: [1, 2, 3, 4, 5, 6],
-        backgroundColor: [
-          "rgba(75,192,192,1)",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0",
-        ],
-        borderColor: "black",
-        borderWidth: 5,
-      },
-    ],
-  });
   //ISSUE: why does this keep updating
   useEffect(() => {
-    if (rawData.length === 0) {
+    if (json.length === 0) {
       getTransactions();
     } else if (transactions.length === 0) {
       updateTransactionsByDate();
+
+      //update the chart
+      new Chart(document.getElementById("transactionLineChart"), {
+        type: "line",
+        data: {
+          labels: json.map((item) => item.date),
+          datasets: [
+            {
+              label: "Transaction",
+              data: json.map((item) => item.amount),
+            },
+          ],
+        },
+      });
     }
-  }, [rawData, transactions]);
+  }, [json, rawData, transactions]);
 
   //ISSUE: "/r bug occuring"
   const submitTransactions = async (e) => {
@@ -51,7 +45,7 @@ function ShowTransactions() {
             amount: rawData[i + 1],
           }),
         });
-        console.log(response);
+        //console.log(response);
       }
     } catch (err) {
       console.log(err.message);
@@ -63,56 +57,48 @@ function ShowTransactions() {
       const response = await fetch("http://localhost:5000/transactions");
       const jsonData = await response.json();
 
-      var tempData = [];
-
-      for (var i = 0; i < jsonData.length; i++) {
-        tempData.push([jsonData[i].date] + " " + [jsonData[i].amount]);
+      for (let i = 0; i < jsonData.length; i++) {
+        if (jsonData[i].amount !== null) {
+          var amount = jsonData[i].amount;
+          amount = amount.replace("$", "");
+          amount = amount.replace("\r", "");
+          jsonData[i].amount = amount;
+        }
       }
 
-      if (tempData.length === 0) {
-        fileToArr();
-        console.log("GET BY DATA");
-      } else {
-        updateRawData(tempData);
-        console.log("GET BY PERN");
-      }
+      updateJSONdata(jsonData);
     } catch (err) {
       console.log(err.message);
     }
   };
 
-  async function fileToArr() {
-    const response = await fetch(data);
-
-    var responseText = await response.text();
-    var responseArray = responseText.split("\n");
-    updateRawData(responseArray);
-  }
-
   const updateTransactionsByDate = () => {
     var transactionsOrganized = [];
     var transactionsInOneDay = [];
 
-    for (var i = 0; i < rawData.length; i++) {
+    for (var i = 0; i < json.length; i++) {
       if (i > 0) {
-        if (rawData[i].split(" ")[0] !== rawData[i - 1].split(" ")[0]) {
-          console.log(rawData[i]);
-          console.log(transactionsInOneDay);
+        console.log(json[i].date.split(" ")[0]);
+        if (json[i].date.split(" ")[0] !== json[i - 1].date.split(" ")[0]) {
           transactionsOrganized.push(transactionsInOneDay);
           transactionsInOneDay = [];
         }
       }
 
-      transactionsInOneDay.push(rawData[i]);
+      transactionsInOneDay.push(json[i].date);
+      transactionsInOneDay.push(json[i].amount);
     }
 
     updateTransactions(transactionsOrganized);
   };
 
   //ISSUE: look into keys
-  //ISSUE: printing out this data is SO bad
   return (
     <section id="transactions">
+      <div id="charts">
+        <canvas id="transactionLineChart"></canvas>
+      </div>
+
       <button onClick={submitTransactions}>SUBMIT TRANSACTIONS</button>
       <h1>ShowTransaction</h1>
 
@@ -120,24 +106,12 @@ function ShowTransactions() {
         return (
           <div>
             {items.map((subItems) => {
-              var data = subItems.split(" ");
-              return (
-                <div>
-                  <h4>
-                    {data[0]} | {data[1]} {data[2]}
-                  </h4>
-                  <h4>
-                    {data[3]} {data[4]}
-                  </h4>
-                </div>
-              );
+              return <h4>{subItems}</h4>;
             })}
             <h4>-----</h4>
           </div>
         );
       })}
-
-      <LineChart chartData={chartData} />
     </section>
   );
 }
