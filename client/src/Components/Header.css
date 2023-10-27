@@ -1,11 +1,37 @@
 #header {
   text-align: center;
+  line-height: 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin-top: 1.5rem;
 }
 
 #stats {
   display: flex;
   flex-direction: row;
-  gap: 5%;
+  gap: 15%;
 
   justify-content: center;
+
+  background-color: white;
+  width: 45%;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: auto;
+
+  border-radius: 2rem;
+}
+
+#starting_amount h2 {
+  color: #ffe169;
+}
+
+#added_amount h2 {
+  color: #ff6969;
+}
+
+#spent_amount h2 {
+  color: #69ff86;
 }

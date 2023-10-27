@@ -5,16 +5,20 @@
 
 body {
   font-family: varela;
+  background-color: #181818;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  color: white;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: white;
 }
 
 h3 {
+  color: #c6c6c6;
   font-size: 1rem;
 }
