@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
 import "./ShowTransactions.css";
 
+import Headers from "./Header.js";
+
 function ShowTransactions() {
   const [json, updateJSONdata] = useState([]);
   const [transactions, updateTransactions] = useState([]);
@@ -121,31 +123,28 @@ function ShowTransactions() {
   //ISSUE: look into keys
   return (
     <section id="transactions_container">
-      <div id="transactions_charts">
-        <canvas id="transactionLineChart"></canvas>
-        <input id="startDateText" type="text" placeholder="Start Date" />
-        <input id="endDateText" type="text" placeholder="End Date" />
-        <button onClick={changeDateRange}>Submit</button>
-      </div>
+      <Headers data={[startingAmount, sumAddToCard, sumTransactions]}></Headers>
+      <div id="data">
+        <div id="transactions_charts">
+          <canvas id="transactionLineChart"></canvas>
+          <input id="startDateText" type="text" placeholder="Start Date" />
+          <input id="endDateText" type="text" placeholder="End Date" />
+          <button onClick={changeDateRange}>Submit</button>
+        </div>
 
-      <div>
-        <h1>{startingAmount}</h1>
-        <h1>{sumTransactions}</h1>
-        <h1>{sumAddToCard}</h1>
-      </div>
-
-      <div id="transactions">
-        <h1>TRANSACTIONS</h1>
-        {transactions.map((items) => {
-          return (
-            //do a card component here later
-            <div id="transactions_daily">
-              {items.map((subItems) => {
-                return <h4>{subItems}</h4>;
-              })}
-            </div>
-          );
-        })}
+        <div id="transactions">
+          <h1>TRANSACTIONS</h1>
+          {transactions.map((items) => {
+            return (
+              //do a card component here later
+              <div id="transactions_daily">
+                {items.map((subItems) => {
+                  return <h4>{subItems}</h4>;
+                })}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
