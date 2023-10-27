@@ -9,16 +9,16 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.5vw;
   color: white;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2vw;
   color: white;
 }
 
 h3 {
   color: #c6c6c6;
-  font-size: 1rem;
+  font-size: 1vw;
 }
