@@ -1,0 +1,11 @@
+#header {
+  text-align: center;
+}
+
+#stats {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+
+  justify-content: center;
+}

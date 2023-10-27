@@ -72,7 +72,9 @@ function ShowTransactions() {
 
       updateSumTransactions(transactionSum);
       updateSumAddToCard(addToSum);
-      updateStartingAmount(jsonData[jsonData.length - 2].amount);
+      updateStartingAmount(
+        Number(jsonData[jsonData.length - 2].amount.replace(",", ""))
+      );
       updateJSONdata(jsonData);
     } catch (err) {
       console.log(err.message);
@@ -123,7 +125,12 @@ function ShowTransactions() {
   //ISSUE: look into keys
   return (
     <section id="transactions_container">
-      <Headers data={[startingAmount, sumAddToCard, sumTransactions]}></Headers>
+      <div id="header">
+        <Headers
+          data={[startingAmount, sumAddToCard, sumTransactions]}
+        ></Headers>
+      </div>
+
       <div id="data">
         <div id="transactions_charts">
           <canvas id="transactionLineChart"></canvas>
