@@ -6,6 +6,11 @@ function ShowTransactions() {
   const [json, updateJSONdata] = useState([]);
   const [transactions, updateTransactions] = useState([]);
   const [fullTransactions, updateFullTransactions] = useState([]);
+
+  const [sumTransactions, updateSumTransactions] = useState([]);
+  const [sumAddToCard, updateSumAddToCard] = useState([]);
+  const [startingAmount, updateStartingAmount] = useState([]);
+
   //ISSUE: why does this keep updating
   useEffect(() => {
     if (json.length === 0) {
@@ -28,7 +33,7 @@ function ShowTransactions() {
     } else if (fullTransactions.length === 0) {
       updateFullTransactions([...transactions]);
     }
-  }, [json, transactions]);
+  }, [json, transactions, fullTransactions, sumTransactions]);
 
   //ISSUE: "/r bug occuring"
   const getTransactions = async () => {
@@ -36,15 +41,36 @@ function ShowTransactions() {
       const response = await fetch("http://localhost:5000/transactions");
       const jsonData = await response.json();
 
+      var transactionSum = 0;
+      var addToSum = 0;
+
       for (let i = 0; i < jsonData.length; i++) {
         if (jsonData[i].amount !== null) {
           var amount = jsonData[i].amount;
           amount = amount.replace("$", "");
           amount = amount.replace("\r", "");
           jsonData[i].amount = amount;
+
+          try {
+            if (Number(jsonData[i].amount) < 0) {
+              transactionSum += Number(jsonData[i].amount);
+            } else if (Number(jsonData[i].amount) > 0) {
+              addToSum += Number(jsonData[i].amount);
+            }
+          } catch (err) {
+            console.log(err);
+          }
+
+          console.log(amount);
         }
       }
 
+      transactionSum = Math.round(transactionSum * 100) / 100;
+      addToSum = Math.round(addToSum * 100) / 100;
+
+      updateSumTransactions(transactionSum);
+      updateSumAddToCard(addToSum);
+      updateStartingAmount(jsonData[jsonData.length - 2].amount);
       updateJSONdata(jsonData);
     } catch (err) {
       console.log(err.message);
@@ -77,8 +103,6 @@ function ShowTransactions() {
     var inRange = false;
     var transactionsInRange = [];
 
-    console.log(fullTransactions);
-
     for (var i = 0; i < fullTransactions.length; i++) {
       if ((fullTransactions[i][0].split(" ")[0] === start) & !inRange) {
         inRange = true;
@@ -102,6 +126,12 @@ function ShowTransactions() {
         <input id="startDateText" type="text" placeholder="Start Date" />
         <input id="endDateText" type="text" placeholder="End Date" />
         <button onClick={changeDateRange}>Submit</button>
+      </div>
+
+      <div>
+        <h1>{startingAmount}</h1>
+        <h1>{sumTransactions}</h1>
+        <h1>{sumAddToCard}</h1>
       </div>
 
       <div id="transactions">
