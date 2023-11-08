@@ -4,6 +4,7 @@ import "./ShowTransactions.css";
 
 import Headers from "./Header.js";
 import LineChart from "./DataLineChart.js";
+import CumulativeLineChart from "./CumulativeLineChart.js";
 
 function ShowTransactions() {
   const [json, updateJSONdata] = useState([]);
@@ -120,6 +121,7 @@ function ShowTransactions() {
       <div id="data">
         <div id="transactions_charts">
           <LineChart>{json}</LineChart>
+          <CumulativeLineChart>{json}</CumulativeLineChart>
           <input id="startDateText" type="text" placeholder="Start Date" />
           <input id="endDateText" type="text" placeholder="End Date" />
           <button onClick={changeDateRange}>Submit</button>
