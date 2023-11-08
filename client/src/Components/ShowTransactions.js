@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Chart from "chart.js/auto";
+
 import "./ShowTransactions.css";
 
 import Headers from "./Header.js";
+import LineChart from "./DataLineChart.js";
 
 function ShowTransactions() {
   const [json, updateJSONdata] = useState([]);
@@ -19,19 +20,6 @@ function ShowTransactions() {
       getTransactions();
     } else if (transactions.length === 0) {
       updateTransactionsByDate();
-      //update the chart
-      new Chart(document.getElementById("transactionLineChart"), {
-        type: "line",
-        data: {
-          labels: json.map((item) => item.date),
-          datasets: [
-            {
-              label: "Transaction",
-              data: json.map((item) => item.amount),
-            },
-          ],
-        },
-      });
     } else if (fullTransactions.length === 0) {
       updateFullTransactions([...transactions]);
     }
@@ -62,8 +50,6 @@ function ShowTransactions() {
           } catch (err) {
             console.log(err);
           }
-
-          console.log(amount);
         }
       }
 
@@ -133,7 +119,7 @@ function ShowTransactions() {
 
       <div id="data">
         <div id="transactions_charts">
-          <canvas id="transactionLineChart"></canvas>
+          <LineChart>{json}</LineChart>
           <input id="startDateText" type="text" placeholder="Start Date" />
           <input id="endDateText" type="text" placeholder="End Date" />
           <button onClick={changeDateRange}>Submit</button>
