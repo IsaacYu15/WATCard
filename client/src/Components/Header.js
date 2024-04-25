@@ -5,7 +5,7 @@ function Header(props) {
   return (
     <div id="header">
       <div id="balance">
-        <h3>current balance</h3>
+        <h3>WATCARD TRACKER</h3>
         <h1>${props.data[0] + props.data[1] + props.data[2]}</h1>
       </div>
 

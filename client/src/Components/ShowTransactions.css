@@ -14,7 +14,12 @@
   margin: 5px;
   padding: 5px;
   border-radius: 15px;
+  background-color: white;
 }
 #transactions_charts {
-  width: 75%;
+  width: 50%;
 }
+#dateFilter {
+   font-family: varela;
+}
+

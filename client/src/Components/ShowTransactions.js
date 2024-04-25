@@ -26,7 +26,6 @@ function ShowTransactions() {
     }
   }, [json, transactions, fullTransactions, sumTransactions]);
 
-  //ISSUE: "/r bug occuring"
   const getTransactions = async () => {
     try {
       const response = await fetch("http://localhost:5000/transactions");
@@ -67,6 +66,8 @@ function ShowTransactions() {
       console.log(err.message);
     }
   };
+
+
 
   const updateTransactionsByDate = () => {
     var transactionsOrganized = [];
@@ -109,7 +110,7 @@ function ShowTransactions() {
 
     updateTransactions([...transactionsInRange]);
   };
-  //ISSUE: look into keys
+
   return (
     <section id="transactions_container">
       <div id="header">
@@ -122,13 +123,15 @@ function ShowTransactions() {
         <div id="transactions_charts">
           <LineChart>{json}</LineChart>
           <CumulativeLineChart>{json}</CumulativeLineChart>
-          <input id="startDateText" type="text" placeholder="Start Date" />
-          <input id="endDateText" type="text" placeholder="End Date" />
-          <button onClick={changeDateRange}>Submit</button>
         </div>
 
         <div id="transactions">
           <h1>TRANSACTIONS</h1>
+          <div>
+            <input id="dateFilter" type="text" placeholder="Start Date" />
+            <input id="dateFilter" type="text" placeholder="End Date" />
+            <button id="dateFilter" onClick={changeDateRange}>Submit</button>
+          </div>
           {transactions.map((items) => {
             return (
               //do a card component here later
