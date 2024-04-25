@@ -67,8 +67,6 @@ function ShowTransactions() {
     }
   };
 
-
-
   const updateTransactionsByDate = () => {
     var transactionsOrganized = [];
     var transactionsInOneDay = [];
