@@ -29,6 +29,7 @@ app.get("/transactions", async (req, res) => {
   try {
     const allTransactions = await pool.query("SELECT * FROM transactions");
     res.json(allTransactions.rows);
+
   } catch (err) {
     console.error(err.message);
   }

@@ -22,3 +22,12 @@ browser.find_element(By.ID, "trans_start_date").clear()
 browser.find_element(By.ID, "trans_start_date").send_keys("value", '10/07/2000')
 browser.find_element(By.ID, "trans_search").click()
 
+page_source = browser.page_source
+soup = BeautifulSoup(page_source, 'html.parser')
+
+body_content = soup.body.get_text()
+with open('data.txt', 'w') as f:
+    f.write(body_content)
+    
+browser.quit()
+

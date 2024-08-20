@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./ShowTransactions.css";
-
+import data from "../data.txt";
 import Headers from "./Header.js";
 import LineChart from "./DataLineChart.js";
 import CumulativeLineChart from "./CumulativeLineChart.js";
@@ -30,6 +30,8 @@ function ShowTransactions() {
     try {
       const response = await fetch("http://localhost:5000/transactions");
       const jsonData = await response.json();
+
+      console.log(jsonData);
 
       var transactionSum = 0;
       var addToSum = 0;
@@ -66,6 +68,42 @@ function ShowTransactions() {
       console.log(err.message);
     }
   };
+
+  const refreshTransactions = async () => {
+    try {
+      //delete everything
+      const getResponse = await fetch("http://localhost:5000/transactions");
+      const json = await getResponse.json(); 
+
+      for (let i = 0; i < json.length; i++) {
+        console.log(json[i].transaction_id);
+        const response = await fetch(`http://localhost:5000/transactions/${json[i].transaction_id}`, {
+          method: "DELETE"
+        });
+      }
+
+      const response = await fetch(data);
+
+      var responseText = await response.text();
+      var responseArray = responseText.split("\n");
+
+      for (let i = 0; i < responseArray.length; i+=2) {
+        console.log(responseArray[i]);
+        const response = await fetch(`http://localhost:5000/transactions/`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            date: responseArray[i],
+            amount: responseArray[i + 1],
+          }),
+        });
+      }
+    } 
+    catch (err) {
+      console.error("Error:", err.message);
+    }
+  };
+
 
   const updateTransactionsByDate = () => {
     var transactionsOrganized = [];
@@ -129,6 +167,7 @@ function ShowTransactions() {
             <input id="dateFilter" type="text" placeholder="Start Date" />
             <input id="dateFilter" type="text" placeholder="End Date" />
             <button id="dateFilter" onClick={changeDateRange}>Submit</button>
+            <button className="btn" onClick={() => refreshTransactions()}>Refresh Data</button>
           </div>
           {transactions.map((items) => {
             return (
