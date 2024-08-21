@@ -6,6 +6,8 @@ manage their WATCard spending by offering additional budgeting tools such as:
 - Starting Amount, total spending, total Amount added
 - Visualization of day-to-day spending with line charts & cumulative line charts
 
+A demo is available [here](https://www.youtube.com/watch?v=qHxxQkGsFOQ)
+
 ## BUILT USING
 - PostgresSQL
 - Express.js
