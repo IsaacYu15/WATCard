@@ -5,8 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import requests
 
-"""using selenium to auto scrape, but had security concerns"""
-
 usernameStr = ''
 passwordStr = ''
 
