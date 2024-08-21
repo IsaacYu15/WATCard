@@ -15,7 +15,6 @@ function ShowTransactions() {
   const [sumAddToCard, updateSumAddToCard] = useState([]);
   const [startingAmount, updateStartingAmount] = useState([]);
 
-  //ISSUE: why does this keep updating
   useEffect(() => {
     if (json.length === 0) {
       getTransactions();
